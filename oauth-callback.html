@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>認証コード受信 - 父となる研究室</title>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body style="font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; line-height: 1.6;">
+  <h2>認証コードを受信しました</h2>
+  <p>以下のコードをコピーしてください。</p>
+  <pre id="code" style="background:#f4f4f4; padding:16px; border-radius:8px; word-break:break-all; font-size:14px;"></pre>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code") || "(codeが見つかりませんでした。URL全体: " + window.location.href + ")";
+    document.getElementById("code").textContent = code;
+  </script>
+</body>
+</html>
